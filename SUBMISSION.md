@@ -9,7 +9,7 @@ Handheld
 Pinch both grips, lift the tray, and tilt it with your own hands: in Handheld the
 board you hold *is* the physics world.
 
-(122 characters.)
+(118 characters of plain text; 122 as written with the emphasis markers.)
 
 ## Description (about 500 words)
 
@@ -138,8 +138,9 @@ audio is captured but quiet — the synthesised cues peak around -30 dBFS — so
 raise the system volume before the take rather than re-recording a good run.
 
 Keep the file out of git — the raw Game Bar capture is 60–100 MB. Publish it to
-an unlisted YouTube link, or re-encode it down to a few megabytes and use
-`git add -f` if it has to live beside the build.
+YouTube as a public video (the competition rules ask for a publicly visible demo
+link), or re-encode it down to a few megabytes and use `git add -f` if it has to
+live beside the build.
 
 ## Links
 
@@ -147,6 +148,6 @@ an unlisted YouTube link, or re-encode it down to a few megabytes and use
   hands-only game, `?demo` runs the hands-free attract mode, `?keys` maps the
   arrow keys to the tray. WebXR needs HTTPS, which Pages provides.
 - Source: <https://github.com/amine0007/handheld>
-- Video: `https://youtu.be/<id>` — replace `<id>` with the unlisted upload of the
-  attract mode take (71 s, 1920x1080, one pass, no cuts). The raw capture is
-  94 MB, so it is hosted rather than committed.
+- Video: `https://youtu.be/<id>` — replace `<id>` with the public upload of the
+  attract mode take (71 s, 1920x1080, one pass, no cuts, well under the three
+  minute limit). The raw capture is 94 MB, so it is hosted rather than committed.

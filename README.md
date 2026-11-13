@@ -19,7 +19,9 @@ add `?keys` on a laptop.
 ![The maze up close: brass rim, pale stone deck, copper marble](docs/screenshots/tray.png)
 
 Submission copy — name, tagline, description and a video shot list — lives in
-[`SUBMISSION.md`](SUBMISSION.md).
+[`SUBMISSION.md`](SUBMISSION.md). The Devpost field-by-field runbook, with the
+competition window, eligibility and the exact form answers, is in
+[`DEVPOST.md`](DEVPOST.md).
 
 ## How it plays
 
