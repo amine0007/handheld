@@ -148,6 +148,4 @@ live beside the build.
   hands-only game, `?demo` runs the hands-free attract mode, `?keys` maps the
   arrow keys to the tray. WebXR needs HTTPS, which Pages provides.
 - Source: <https://github.com/amine0007/handheld>
-- Video: `https://youtu.be/<id>` — replace `<id>` with the public upload of the
-  attract mode take (71 s, 1920x1080, one pass, no cuts, well under the three
-  minute limit). The raw capture is 94 MB, so it is hosted rather than committed.
+- Video: `https://www.youtube.com/watch?v=VCA0u0vdaRI
