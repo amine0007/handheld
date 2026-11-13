@@ -9,6 +9,11 @@ Built with [IWSDK](https://iwsdk.dev) 1.1 (`@iwsdk/core`) and Three.js for the
 Meta Horizon Start Developer Competition. Hand tracking first, controller
 friendly.
 
+**[Play in the browser](https://amine0007.github.io/handheld/?demo)** — that
+opens the hands-free attract mode; load
+<https://amine0007.github.io/handheld/> on the headset for the real thing, or
+add `?keys` on a laptop.
+
 ![The tray resting on its stand](docs/screenshots/scene.png)
 
 ![The maze up close: brass rim, pale stone deck, copper marble](docs/screenshots/tray.png)

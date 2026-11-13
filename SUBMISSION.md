@@ -98,8 +98,9 @@ including the scripted drop and the tip reset, then the summary and the restart.
 8. **2:40–3:00 — Behind the curtain.** Ten seconds of board-local gravity code,
    then the hand-interaction table, then the URL/QR. End on the tray in hands.
 
-`docs/screenshots/attract.png` is a 1280x800 frame straight out of the attract
-mode; it works as the submission thumbnail.
+`docs/screenshots/attract.png` is a 1280x720 frame straight out of the attract
+mode take, level two at `2/6`, with the tray lifted and tilted; it works as the
+submission thumbnail.
 
 Record at 4K if possible, capture the headset view plus a second camera on the
 hands when the real device is available.
@@ -109,24 +110,43 @@ hands when the real device is available.
 The hands-free loop is about 70 s long, so a single take covers the whole video
 brief: record from level one's lift to the summary's restart and stop there.
 
-1. Open the *deployed* build with `?demo`, in a normal Chrome window at 16:9.
+1. Open the *deployed* build with `?demo` — not `npm run dev`. The dev server
+   injects the IWER runtime, which draws its own floating **Enter XR** pill over
+   the top of the welcome panel; it is absent from `dist` and from the Pages
+   build, so nothing on the production URL has to be hidden.
 2. Press `F11` first: fullscreen removes the tab strip and the address bar, which
    otherwise show a localhost URL in the frame.
-3. Park the mouse pointer off the page, and let the run get to level one before
-   you start recording — the attract mode keeps looping, so it is easy to catch
-   the tail of the previous run.
-4. Stop after the summary tips back into a new run. That is roughly 70 s: six
+3. Record the **screen**, not the window. `Win+Alt+R` captures the active window
+   rect, which is taller than the page once the chrome is hidden and leaves a
+   band of black pixels (112 px in one take) across the top. A display capture,
+   or a recording region drawn around the page only, keeps the frame edge to edge.
+   The app itself is fine: the canvas tracks `window.innerWidth/innerHeight`
+   through any resize, anchored at the top left.
+4. Move the pointer completely off the app — the bottom-right corner of the
+   desktop, or another display. It sits in the frame for the whole take
+   otherwise, frozen over the room.
+5. Let the run reach level one before you start recording — the attract mode
+   keeps looping, so it is easy to catch the tail of the previous run.
+6. Stop after the summary tips back into a new run. That is roughly 70 s: six
    mazes, one scripted trap-hole drop, one tip reset, the summary and the restart.
-5. Trim the recording to the lift at the start and the restart at the end; the
-   narration beats (1, 2 and 8 in the list above) can be recorded over it.
+   A good take reads `1/6` at `0:00` on the first second, `6/6` with `3/3` rings
+   at about `0:11` of level time, and back to `1/6` before the file ends.
 
-Keep the file out of git — the raw Game Bar capture is close to 100 MB. Publish
-it to an unlisted YouTube link, or re-encode it down to a few megabytes and use
+Check the frame, not just the playthrough: the picture must fill the video edge
+to edge, the cursor must be gone, and no overlay should touch the HUD. Game Bar
+audio is captured but quiet — the synthesised cues peak around -30 dBFS — so
+raise the system volume before the take rather than re-recording a good run.
+
+Keep the file out of git — the raw Game Bar capture is 60–100 MB. Publish it to
+an unlisted YouTube link, or re-encode it down to a few megabytes and use
 `git add -f` if it has to live beside the build.
 
-## Links to fill in before submission
+## Links
 
-- Deployed build: `https://<host>/`
-- Source: `https://github.com/<user>/handheld`
-- Video: `https://youtu.be/<id>` (unlisted), or `https://<host>/handheld-demo.mp4`
-  if a compressed copy is shipped with the build
+- Playable build: <https://amine0007.github.io/handheld/> — plain `/` is the
+  hands-only game, `?demo` runs the hands-free attract mode, `?keys` maps the
+  arrow keys to the tray. WebXR needs HTTPS, which Pages provides.
+- Source: <https://github.com/amine0007/handheld>
+- Video: `https://youtu.be/<id>` — replace `<id>` with the unlisted upload of the
+  attract mode take (71 s, 1920x1080, one pass, no cuts). The raw capture is
+  94 MB, so it is hosted rather than committed.
