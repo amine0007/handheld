@@ -1,0 +1,95 @@
+<!--
+  Handheld run HUD. Rendered by the stock Horizon kit, so the surface follows
+  the configured color scheme: every text color has a :dark variant. Units are
+  the UIKitML default (100 units = 1 m); the scene scales this node to 0.15, so
+  the card ends up about 35 cm wide. Element ids are read at runtime by
+  src/labyrinth/hud-view.ts.
+-->
+<style>
+  .hud-root {
+    flex-direction: column;
+    width: 380px;
+  }
+
+  .stats {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 16px;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-bottom: 6px;
+  }
+
+  .stat {
+    flex-direction: column;
+  }
+
+  .stat-label {
+    color: #6b5a00;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+  }
+
+  .stat-label:dark {
+    color: #f5d90a;
+  }
+
+  .stat-value {
+    color: #1c1d20;
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  .stat-value:dark {
+    color: #fafaf7;
+  }
+
+  .level-name {
+    color: #3a3b40;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-bottom: 10px;
+  }
+
+  .level-name:dark {
+    color: #dddfe3;
+  }
+
+  .hint {
+    color: #3a3b40;
+    font-size: 16px;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-bottom: 18px;
+  }
+
+  .hint:dark {
+    color: #dddfe3;
+  }
+</style>
+<Panel class="hud-root">
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-label">LEVEL</div>
+      <div id="level-count" class="stat-value">1/6</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">TIME</div>
+      <div id="time-value" class="stat-value">0:00</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">DROPS</div>
+      <div id="drops-value" class="stat-value">0</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">RINGS</div>
+      <div id="check-value" class="stat-value">0/3</div>
+    </div>
+  </div>
+  <div id="level-name" class="level-name">FIRST STEPS</div>
+  <div id="hint-value" class="hint">Pinch the grips to lift the tray</div>
+</Panel>

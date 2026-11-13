@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" href="data:," />
+    <meta
+      name="description"
+      content="Handheld — a bimanual marble labyrinth for Meta Quest, built with the Immersive Web SDK."
+    />
+    <title>Handheld — Bimanual Marble Labyrinth</title>
+    <style>
+      /* The canvas is sized to the window, so any overflow would put a
+         scrollbar next to the 3D view -- and be captured in a demo recording. */
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+        background: #000;
+      }
+      /* A double click on a HUD label would otherwise leave selected text
+         floating over the board for the rest of the session. */
+      body,
+      #scene-container {
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+      }
+      #scene-container canvas {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="scene-container"></div>
+    <script type="module" src="/src/index.ts"></script>
+  </body>
+</html>
